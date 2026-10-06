@@ -1,0 +1,278 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>ZAHRA_ALI❤️</title>
+
+<style type="text/css">
+
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+
+body {
+	transition: background 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+	background: #111 !important;
+	color: #eee !important;
+}
+
+#controls {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 999;
+}
+
+#controls button {
+	margin: 5px;
+	padding: 8px 14px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+#toggleTheme {
+	background: #333;
+	color: #fff;
+}
+
+#playMusic {
+	background: #ff4d6d;
+	color: #fff;
+}
+
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<!-- دکمه‌ها -->
+
+<div id="controls">
+
+	<button id="toggleTheme">
+		🌓 حالت شب/روز
+	</button>
+
+	<button id="playMusic">
+		🎶 پخش/توقف آهنگ
+	</button>
+
+</div>
+
+
+<!-- آهنگ -->
+
+<audio
+	id="mySong"
+	src="https://dl.musicdel.ir/tag/music/1404/09/17/Aliha%20-%20Navar%20(128).mp3">
+</audio>
+
+
+<div id="mainDiv">
+
+	<div id="content">
+
+		<div id="code">
+
+			<span class="comments">/**</span><br />
+
+			<span class="space"/>
+			<span class="comments">
+				* نامه‌ای برای زهرا❤️
+			</span><br />
+
+			<span class="space"/>
+			<span class="comments">*/</span><br />
+
+			😵‍💫💘 یه جور مستم ازت<br />
+			...که هیچ هوشیاری‌ای نمی‌خوام<br />
+
+			🥴🔥 تشنه‌ام... نه آب<br />
+			...تشنه‌ی اون بغلِ گرمتم<br />
+
+			💋😮‍💨 نزدیکت که میشم<br />
+			...نفسم بند میاد، دلم نمیاد برگردم<br />
+
+			🫂✨ تو اون آغوشته که آدم<br />
+			...دیگه دنبال هیچ‌چیزی نمی‌گرده<br />
+
+			💫🥂 مستِ توام، تشنه‌ی توام<br />
+			...و این بهترین حالیه که داشتم<br />
+
+			🌙💌 زهرا جان، اسمت که میاد رو زبونم<br />
+			قلبم یه ریتم تازه می‌گیره
+
+			<br>
+
+			<span id="heartspan">
+
+				<a href="image.jpg">
+					<i class="fas fa-heart" id="icon"></i>
+				</a>
+
+			</span>
+
+		</div>
+
+
+		<div id="loveHeart">
+
+			<canvas id="garden"></canvas>
+
+			<div id="words">
+
+				<div id="messages">
+
+					🌹 Tanışma Tarihi
+
+					<div id="elapseClock"></div>
+
+				</div>
+
+
+				<div id="loveu">
+
+					Tek nefesimsin.💋<br/>
+
+					<div class="signature">
+						- ALI
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+
+var offsetX = $("#loveHeart").width() / 2;
+
+var offsetY = $("#loveHeart").height() / 2 - 55;
+
+
+// ❤️ تاریخ آشنایی
+// 25 سپتامبر 2026
+
+var together = new Date();
+
+together.setFullYear(2026, 8, 25);
+
+together.setHours(17);
+
+together.setMinutes(30);
+
+together.setSeconds(0);
+
+together.setMilliseconds(0);
+
+
+if (!document.createElement('canvas').getContext) {
+
+	var msg = document.createElement("div");
+
+	msg.id = "errorMsg";
+
+	msg.innerHTML =
+		"Your browser doesn't support HTML5!<br/>" +
+		"Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+
+	document.body.appendChild(msg);
+
+	$("#code").css("display", "none");
+
+	$("#copyright").css("position", "absolute");
+
+	$("#copyright").css("bottom", "10px");
+
+	document.execCommand("stop");
+
+} else {
+
+	setTimeout(function () {
+
+		startHeartAnimation();
+
+	}, 5000);
+
+
+	timeElapse(together);
+
+
+	setInterval(function () {
+
+		timeElapse(together);
+
+	}, 500);
+
+
+	adjustCodePosition();
+
+	$("#code").typewriter();
+
+}
+
+
+// 🎶 پخش / توقف آهنگ
+
+document.getElementById("playMusic").addEventListener("click", function() {
+
+	let song = document.getElementById("mySong");
+
+	if (song.paused) {
+
+		song.play().catch(function(error) {
+
+			console.log("Music play error:", error);
+
+			alert("آهنگ پخش نشد. ممکن است لینک آهنگ اجازه پخش مستقیم ندهد.");
+
+		});
+
+	} else {
+
+		song.pause();
+
+	}
+
+});
+
+
+// 🌓 تغییر حالت شب / روز
+
+document.getElementById("toggleTheme").addEventListener("click", function() {
+
+	document.body.classList.toggle("dark-mode");
+
+});
+
+</script>
+
+</body>
+
+</html>
+```
